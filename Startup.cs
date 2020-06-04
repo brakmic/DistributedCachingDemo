@@ -28,11 +28,11 @@ namespace DistributedCaching
                 {
                     new Uri("http://localhost:8091")
                 };
-                options.Username = "patentsight";
-                options.Password = "aab++112";
+                options.Username = "your_couchbase_user";
+                options.Password = "your_password";
             });
 
-            services.AddDistributedCouchbaseCache("PatentSightCache", options => { });
+            services.AddDistributedCouchbaseCache("your_bucket_name", options => { });
             services.AddControllers();
         }
 
